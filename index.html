@@ -17,10 +17,10 @@
     <div class="form__block">
       <input class="form__input form__input--first-name" type="text" name="first-name" value="" placeholder="First name" pattern="[a-zA-Zа-яА-Я]+" required>
       <input class="form__input form__input--last-name" type="text" name="last-name" value="" placeholder="Last name" pattern="[a-zA-Zа-яА-Я]+" required>
-      <input class="form__input" type="email" name="email" value="" placeholder="Email adress" required>
+      <input class="form__input" type="email" name="email" value="" placeholder="Email adress">
       <input class="form__input" type="password" name="password" value="" placeholder="Password" required>
 
-      <select class="form__input" required>
+      <select class="form__input">
         <option class="form__input-first-line" value="" disabled="disabled" selected="selected">Your country</option>
         <option value="AX">Åland Islands</option>
         <option value="AF">Afghanistan</option>
@@ -277,9 +277,9 @@
         <span class="form__text">Subscribe Now!</span>
       </label>
       <div class="form__radio">
-        <input class="form__radio-input" type="radio" name="gender" value="male" checked> Male
+        <input class="form__radio-input" type="radio" name="gender" value="male"> Male
         <input class="form__radio-input" type="radio" name="gender" value="female"> Female
-        <input class="form__radio-input" type="radio" name="gender" value="other"> Other
+        <input class="form__radio-input" type="radio" name="gender" value="other" checked> Other
       </div>
 
       <button class="form__button" type="submit" name="button">Sing up for free</button>
