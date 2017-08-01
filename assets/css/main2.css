@@ -1,0 +1,138 @@
+/* Custom Fonts */
+/* https://github.com/scottsouthard/Medici/tree/master/vendor/assets/fonts */
+@font-face {
+    font-family: 'Hans Kendrick';
+    src: url('../fonts/hanskendrick-medium-webfont.woff2') format('woff2'),
+         url('../fonts/hanskendrick-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hans Kendrick';
+    src: url('../fonts/hanskendrick-heavy-webfont.woff2') format('woff2'),
+         url('../fonts/hanskendrick-heavy-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* General */
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 80px 10px;
+  background: #e2e7ec;
+  font-family: sans-serif;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Media grid */
+.media-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1140px;
+  list-style: none;
+  overflow-x: auto;
+}
+  .media-list__item{
+    display: flex;
+    width: 33.3333333%;
+    padding: 10px;
+  }
+  .media-list__item--hero{
+    width: 66.6666666%;
+  }
+
+
+/* Article */
+.article{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #fff;
+}
+
+  /* Article elements */
+  .article__image{
+    width: 100%;
+    display: block;
+  }
+  .article__info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 25px;
+  }
+    .article__title{
+      margin: 0 0 20px;
+      font-family: 'Hans Kendrick';
+      font-size: 22px;
+    	font-weight: 900;
+      text-transform: uppercase;
+    	line-height: 30px;
+    	letter-spacing: 0.6px;
+    	color: #1d1d1d;
+    }
+    .article__date{
+      font-family: 'Hans Kendrick';
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+	    color: #818181;
+    }
+
+  /* Article Hero */
+  .article--hero{
+    position: relative;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .article--hero:before{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgba(0,0,0, 0.8) 30%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+    .article--hero .article__image{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      object-fit: cover;
+    }
+    .article--hero .article__info{
+      position: relative;
+      z-index: 2;
+    }
+      .article--hero .article__title{
+        max-width: 450px;
+        margin: 20px 0 0;
+        font-size: 30px;
+        line-height: 36.0px;
+      	letter-spacing: 0.8px;
+      	color: #ffffff;
+      }
+      .article--hero .article__date{
+        order: -1;
+        opacity: 0.5;
+        color: #fff;
+      }
